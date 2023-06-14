@@ -3,5 +3,9 @@ This is a ChatGPT based voice chat bot that is meant for language learning. The 
 
 The app currently only supports native english speakers with spanish as their target language but can be easily updated to work with any combination of languages. Performance will be closely tied to the ChatGPT training dataset so your mileage may vary.
 
-The app requires a OpenAI api key, if you would like to test out this app and do not have OpenAI API access please contact gabe @ gabebohlmann@gmail.com 
+The app requires Google Cloud API access through a Google Cloud ADC (Application Default Credential) JSON file set as an environmental variable with 
+```bash set GOOGLE_APPLICATION_CREDENTIALS="C:\path\to\your\keyfile.json" ```
+see https://cloud.google.com/docs/authentication/provide-credentials-adc for more details.
+The app also requires a OpenAI API key to be specified in the openai.api_key variable. The app was designed and tested around the capabilities of ChatGPT 4 but it will function with ChatGPT 3.5-turbo. The app's ChatGPT API calls use the most recent ChatCompletion API call to specify the system's goal, provide an example response, and chat history(coming soon).
+If you would like to test out this app and do not have ChatGPT4 API access please contact gabe at gabebohlmann@gmail.com 
 
